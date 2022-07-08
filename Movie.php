@@ -12,14 +12,22 @@ class Movie {
         $this->genre = $genre;
         $this->vote = $vote;
         $this->getVote();
+        $this->printMovie();
     }
 
     public function getVote() {
-        if ($this->vote > 5) {
-            $this->limit = 'Questo film ha superato la sufficienza';
+        if ($this->vote > $this->limit) {
+            return 'Questo film ha superato la sufficienza';
         } else {
-            $this->limit = 'Questo film non ha superato la sufficienza';
+            return 'Questo film non ha superato la sufficienza';
         }
+    }
+
+    public function printMovie() {
+        return "<h1>{$this->title}</h1>
+                <h2>{$this->genre}</h2>
+                <h3>{$this->vote}</h3>"
+                . $this->getVote();
     }
 }
 

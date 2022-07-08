@@ -12,7 +12,7 @@ $film_3 = new Movie('Joker', 'dramatic', 7);
 //var_dump($film_3);
 
 $film_4 = new Movie('Blade Runner', 'science-fiction', 9);
-///var_dump($film_4);
+//var_dump($film_4);
 
 $film_5 = new Movie('House of the dead', 'horror', 2);
 //var_dump($film_5);
